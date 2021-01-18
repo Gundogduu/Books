@@ -74,23 +74,65 @@ namespace Books
             product1,product2,product3,product4,product5,product6,product7
 
             };
-            //son olarak foreach ile urunlerin/kitaplarin ozelliklerini döndürerek sayfaya yazdırdım.
-            foreach (Product product in products)
+            
+            
+            
+            //son olarak foreach,for ve while ile urunlerin/kitaplarin ozelliklerini döndürerek sayfaya yazdırdım.
+
+            //bu consolda ayırt edebilmek icin
+            Console.WriteLine("Foreach ile");
+            
+            foreach (Product product in products)                                         //products'taki her bir product'ı döndürmesini soyledim.Bu arada "product" bir takma isim/alias.
             {
                 Console.WriteLine("-------------BOOK-------------");
-                Console.WriteLine("Book Name : " + product.Name);
+                                                                                          //burada o anki elemanın özelliklerini yazdırmasını soyledim
+                Console.WriteLine("Book Name : " + product.Name);    
                 Console.WriteLine("Author : " + product.Author);
                 Console.WriteLine("Language : " + product.Language);
                 Console.WriteLine("Release Date : " + product.ReleaseDate);
                 Console.WriteLine("Number of Pages : " + product.NumberOfPages);
                 Console.WriteLine("Price : " + product.Price + " tl");
+                
             }
 
+            //bunlar consolda ayırt edebilmek icin
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine("For ile");
+            
+            for (int pro = 0;pro<products.Length;pro++)                                  //int degiskenini pro olarak tanımladım ve pro degiskenine 0 atadım ve pro, products'ın eleman sayısından küçükse pro'yu bir bir artırmasını soyledim. 
+            {                                                               
+                Console.WriteLine("-------------BOOK-------------");
+                Console.WriteLine("Book Name : " + products[pro].Name);                  //ardından burada o anki elemanın özelliklerini yazdırmasını soyledim
+                Console.WriteLine("Author : " + products[pro].Author);
+                Console.WriteLine("Language : " + products[pro].Language);
+                Console.WriteLine("Release Date : " + products[pro].ReleaseDate);
+                Console.WriteLine("Number of Pages : " + products[pro].NumberOfPages);
+                Console.WriteLine("Price : " + products[pro].Price + " tl");
+            }
+            
+            //bunlar consolda ayırt edebilmek icin
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine("While ile");
+           
+            int p = 0;
+            while (p<6)                      //while'ın dısında int degiskeni belirlemem gerekti,cunki while'ın parantez icine sadece kosul yazılır. Ve o degiskeni kosulda kullandım.
+            {
+                p++;                                                                              //burada p yi bir bir artırmasını soyledim
+                Console.WriteLine("-------------BOOK-------------");
+                Console.WriteLine("Book Name : " + products[p].Name);                             //ardından burada o anki elemanın özelliklerini yazdırmasını soyledim
+                Console.WriteLine("Author : " + products[p].Author);
+                Console.WriteLine("Language : " + products[p].Language);
+                Console.WriteLine("Release Date : " + products[p].ReleaseDate);
+                Console.WriteLine("Number of Pages : " + products[p].NumberOfPages);
+                Console.WriteLine("Price : " + products[p].Price + " tl");
+            }
 
         }
     }
 
-    //urun class'ı olusturdum ve urunun ozelliklerini tüm ekledim.
+    //İlk olarak; urun class'ı olusturdum ve urunun ozelliklerinin tumunu belirledim.
     class Product
     {
 
