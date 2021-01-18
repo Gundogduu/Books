@@ -74,13 +74,12 @@ namespace Books
             product1,product2,product3,product4,product5,product6,product7
 
             };
-            
-            
+
             
             //son olarak foreach,for ve while ile urunlerin/kitaplarin ozelliklerini döndürerek sayfaya yazdırdım.
 
             //bu consolda ayırt edebilmek icin
-            Console.WriteLine("Foreach ile");
+            Console.WriteLine("with Foreach");
             
             foreach (Product product in products)                                         //products'taki her bir product'ı döndürmesini soyledim.Bu arada "product" bir takma isim/alias.
             {
@@ -97,7 +96,7 @@ namespace Books
             //bunlar consolda ayırt edebilmek icin
             Console.WriteLine(" ");
             Console.WriteLine(" ");
-            Console.WriteLine("For ile");
+            Console.WriteLine("with For");
             
             for (int pro = 0;pro<products.Length;pro++)                                  //int degiskenini pro olarak tanımladım ve pro degiskenine 0 atadım ve pro, products'ın eleman sayısından küçükse pro'yu bir bir artırmasını soyledim. 
             {                                                               
@@ -113,19 +112,21 @@ namespace Books
             //bunlar consolda ayırt edebilmek icin
             Console.WriteLine(" ");
             Console.WriteLine(" ");
-            Console.WriteLine("While ile");
+            Console.WriteLine("with While");
            
             int p = 0;
-            while (p<6)                      //while'ın dısında int degiskeni belirlemem gerekti,cunki while'ın parantez icine sadece kosul yazılır. Ve o degiskeni kosulda kullandım.
+            while (p<products.Length)                      //while'ın dısında int degiskeni belirlemem gerekti,cunki while'ın parantez icine sadece kosul yazılır. Ve o degiskeni kosulda kullandım.
             {
-                p++;                                                                              //burada p yi bir bir artırmasını soyledim
+                
+                                                                                        //burada p yi bir bir artırmasını soyledim
                 Console.WriteLine("-------------BOOK-------------");
-                Console.WriteLine("Book Name : " + products[p].Name);                             //ardından burada o anki elemanın özelliklerini yazdırmasını soyledim
+                Console.WriteLine("Book Name : " + products[p].Name);                          //ardından burada o anki elemanın özelliklerini yazdırmasını soyledim
                 Console.WriteLine("Author : " + products[p].Author);
                 Console.WriteLine("Language : " + products[p].Language);
                 Console.WriteLine("Release Date : " + products[p].ReleaseDate);
                 Console.WriteLine("Number of Pages : " + products[p].NumberOfPages);
                 Console.WriteLine("Price : " + products[p].Price + " tl");
+                p++;                                                                   //p++ islemi altta olmalı yoksa fazladan eleman arar hata verir!
             }
 
         }
