@@ -85,8 +85,7 @@ namespace Books
             foreach (Product product in products)                                         //products'taki her bir product'ı döndürmesini soyledim.Bu arada "product" bir takma isim/alias.
             {
                 Console.WriteLine("-------------BOOK-------------");
-                                                                                          //burada o anki elemanın özelliklerini yazdırmasını soyledim
-                Console.WriteLine("Book Name : " + product.Name);    
+                Console.WriteLine("Book Name : " + product.Name);                         //burada o anki elemanın özelliklerini yazdırmasını soyledim
                 Console.WriteLine("Author : " + product.Author);
                 Console.WriteLine("Language : " + product.Language);
                 Console.WriteLine("Release Date : " + product.ReleaseDate);
