@@ -2,7 +2,7 @@
 
 namespace Books
 {
-    //URUNLERI DINAMIK OLARAK LİSTELEME;                                                   
+    //URUNLERI DINAMIK OLARAK LISTELEME;                                                   
 
     class Program
     {
@@ -12,6 +12,7 @@ namespace Books
 
             //2.olarak; Product class'ımı cagırdım ve urun olarak kitaplar oluşturdum.
             Product product1 = new Product();
+            product1.Id = 01;
             product1.Name = "Simyacı";
             product1.Author = "Paulo Coelho";
             product1.Language = "Turkish";
@@ -20,6 +21,7 @@ namespace Books
             product1.Price = 14;
 
             Product product2 = new Product();
+            product2.Id = 02;
             product2.Name = "1984";
             product2.Author = "George Orwell";
             product2.Language = "Turkish";
@@ -28,6 +30,7 @@ namespace Books
             product2.Price = 13;
 
             Product product3 = new Product();
+            product3.Id = 03;
             product3.Name = "Momo";
             product3.Author = "Michael Ende";
             product3.Language = "Turkish";
@@ -36,6 +39,7 @@ namespace Books
             product3.Price = 16;
 
             Product product4 = new Product();
+            product4.Id = 04;
             product4.Name = "Şeker Portakalı";
             product4.Author = "Jose Mauro De Vasconcelos";
             product4.Language = "Turkish";
@@ -44,6 +48,7 @@ namespace Books
             product4.Price = 16;
 
             Product product5 = new Product();
+            product5.Id = 05;
             product5.Name = "Fahrenheit 451";
             product5.Author = "Ray Bradbury";
             product5.Language = "Turkish";
@@ -52,6 +57,7 @@ namespace Books
             product5.Price = 15;
 
             Product product6 = new Product();
+            product6.Id = 06;
             product6.Name = "Arayış Mehmet'in Hikayesi";
             product6.Author = "Mehmet Yıldız";
             product6.Language = "Turkish";
@@ -60,6 +66,7 @@ namespace Books
             product6.Price = 15;
 
             Product product7 = new Product();
+            product7.Id = 07;
             product7.Name = "Hayvan Çiftliği";
             product7.Author = "George Orwell";
             product7.Language = "Turkish";
@@ -118,7 +125,7 @@ namespace Books
             while (p<products.Length)                      //while'ın dısında int degiskeni belirlemem gerekti,cunki while'ın parantez icine sadece kosul yazılır. Ve o degiskeni kosulda kullandım.
             {
                 
-                                                                                        //burada p yi bir bir artırmasını soyledim
+                                                                                        
                 Console.WriteLine("-------------BOOK-------------");
                 Console.WriteLine("Book Name : " + products[p].Name);                          //ardından burada o anki elemanın özelliklerini yazdırmasını soyledim
                 Console.WriteLine("Author : " + products[p].Author);
@@ -126,8 +133,8 @@ namespace Books
                 Console.WriteLine("Release Date : " + products[p].ReleaseDate);
                 Console.WriteLine("Number of Pages : " + products[p].NumberOfPages);
                 Console.WriteLine("Price : " + products[p].Price + " tl");
-                p++;                                                                   //p++ islemi altta olmalı yoksa fazladan eleman arar hata verir!
-            }
+                p++;                                                                   //burada p yi bir bir artırmasını soyledim
+            }                                                                          //p++ islemi altta olmalı yoksa fazladan eleman arar hata verir!
 
         }
     }
@@ -135,7 +142,7 @@ namespace Books
     //İlk olarak; urun class'ı olusturdum ve urunun ozelliklerinin tumunu belirledim.
     class Product
     {
-
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Author { get; set; }
         public string ReleaseDate { get; set; }
